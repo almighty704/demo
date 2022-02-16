@@ -149,7 +149,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .footer__container--left .footer-flex .icons {
     img {
       margin: 0 5px;
@@ -159,5 +159,9 @@
   .footer__container--left .links__footer {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer__container--left .links__footer .link {
+    margin-left: 0px !important;
   }
 }

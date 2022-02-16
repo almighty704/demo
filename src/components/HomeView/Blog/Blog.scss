@@ -130,6 +130,11 @@
       }
     }
   }
+
+  .blog__container__carousel__text .link {
+    margin-left: 0;
+    text-align: center !important;
+  }
 }
 
 @keyframes gradient {
