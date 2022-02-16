@@ -1,0 +1,151 @@
+@import '../../../index';
+
+.recomended-hotels {
+  background: #fafafa;
+  padding: 7em 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &__content {
+      width: 570px;
+      height: 240px;
+      background: $white;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &__left {
+        padding: 20px 0 0 20px;
+
+        .stars {
+          margin-top: -10px;
+        }
+        .price {
+          font-size: 14px;
+        }
+
+        .parag {
+          font-size: 14px;
+          max-width: 300px;
+        }
+
+        .links {
+          display: flex;
+          position: absolute;
+          bottom: 0;
+          .link {
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 10px;
+            margin: auto 0;
+            white-space: nowrap;
+          }
+          .link-bgyellow {
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 50px;
+            background: #ffc107;
+            width: 200px;
+            padding: 1em 2.5em;
+            color: #fff;
+          }
+        }
+      }
+
+      &__right {
+        right: 0;
+        position: absolute;
+        width: 270px;
+        height: 240px;
+        max-width: 100%;
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+        @include img-default;
+        transition: width 0.5s linear;
+        &:hover {
+          clip-path: none;
+          width: 570px;
+          position: absolute;
+          right: 0;
+          .addres {
+            left: 40%;
+          }
+        }
+
+        .span-discount {
+          position: absolute;
+          top: 10%;
+          width: 100px;
+          background: #ffc107;
+          padding: 0.2em 4em;
+          font-size: 16px;
+          color: #fff;
+          font-weight: 500;
+        }
+        .addres {
+          position: absolute;
+          bottom: 2px;
+          font-size: 14px;
+          margin-bottom: 0.5em;
+          color: #fff;
+          left: 30%;
+          transition: left 0.5s ease;
+          img {
+            margin: auto 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .recomended-hotels {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+
+      &__content {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .recomended-hotels {
+    &__container {
+      &__content {
+        max-width: 100%;
+        height: auto;
+        background: $white;
+        display: block;
+        text-align: center;
+        &__left {
+          .parag {
+            max-width: 100%;
+          }
+          .links {
+            position: relative;
+            justify-content: center;
+          }
+        }
+        &__right {
+          position: relative;
+          clip-path: none;
+          width: 570px;
+          .span-discount {
+            left: 0;
+          }
+          .addres {
+            left: 40%;
+          }
+          &:hover {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}

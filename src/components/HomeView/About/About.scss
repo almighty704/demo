@@ -1,0 +1,62 @@
+@import '../../../index';
+
+.about {
+  background: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80');
+  width: 100%;
+  @include img-default;
+  &__container {
+    color: $white;
+    padding: 7em 0;
+    &__left {
+      margin: auto 2em;
+      .text {
+        font-size: 40px;
+      }
+
+      .h2-logo-yellow {
+        color: $color-yellow;
+      }
+
+      .parag {
+        font-size: 15px;
+      }
+
+      .line {
+        margin: 2em 0;
+        height: 2px;
+        width: 70px;
+        background: $color-yellow;
+      }
+
+      .font-parisiene {
+        font-size: 30px;
+        font-family: 'Parisienne', sans-serif;
+      }
+    }
+    &__right {
+      iframe {
+        width: 570px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .about {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      &__left {
+        .line {
+          margin: 2em auto;
+        }
+      }
+      &__right {
+        iframe {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../index';
+
+.destination {
+  margin: 7em auto auto auto;
+  &__container {
+    @include flex-box;
+    &__left {
+      margin: auto;
+      .text {
+        &-yellow {
+          color: $color-yellow;
+          font-size: 12px;
+        }
+      }
+      .h2-big {
+        font-size: 38px;
+        font-weight: 400;
+        span {
+          font-weight: 600;
+        }
+      }
+      .line {
+        background: $color-yellow;
+        height: 2px;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    &__right {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .destination {
+    margin-bottom: 20px;
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

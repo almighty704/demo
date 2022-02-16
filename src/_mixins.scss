@@ -1,0 +1,18 @@
+@mixin flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin img-default {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+@mixin width-770 {
+  width: 770px;
+  max-width: 100%;
+}
+@mixin line {
+  background: $color-yellow;
+  height: 2px;
+}

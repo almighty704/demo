@@ -1,0 +1,29 @@
+@import '../../index';
+
+.header__navbar__list__items--item {
+  .dropdown-pagesx {
+    left: 50%;
+  }
+  .dropdown-menux {
+    margin-top: 24px;
+    background: $color-text;
+    padding: 1em 1.5em;
+    position: absolute;
+    display: none;
+    border-bottom: 2px solid $color-yellow;
+    .dropdown-pages {
+      display: flex;
+      .display-flex {
+        margin: 0 20px;
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    .dropdown-items {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  }
+}

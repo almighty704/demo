@@ -1,0 +1,88 @@
+.hero {
+  .carousel {
+    position: inherit;
+    &-inner {
+      position: unset;
+    }
+
+    &-item {
+      position: unset;
+      .image {
+        &--first {
+          background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+        }
+
+        &--second {
+          background: url('https://images.unsplash.com/photo-1574227492706-f65b24c3688a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80');
+        }
+
+        &--third {
+          background: url('https://images.unsplash.com/photo-1575644796989-e22670170a8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80');
+        }
+      }
+
+      .img {
+        width: 500px;
+        height: 800px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .hero__relative {
+          .hero__text {
+            color: white;
+            width: 400px;
+            max-width: 100%;
+            margin: auto;
+            padding-top: 230px;
+
+            .span-welcome {
+              font-size: 38px;
+            }
+
+            .right-aligned {
+              font-size: 20px;
+              text-align: right;
+            }
+            .h1-title {
+              font-size: 143px;
+              line-height: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next,
+  .carousel-indicators {
+    display: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero {
+    .carousel {
+      &-item {
+        .img {
+          .hero__relative {
+            .hero__text {
+              text-align: center;
+              .span-welcome {
+                font-size: 38px;
+              }
+
+              .right-aligned {
+                font-size: 20px;
+                text-align: center;
+              }
+              .h1-title {
+                font-size: 100px;
+                line-height: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
